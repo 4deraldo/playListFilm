@@ -8,17 +8,17 @@
   --color1: #000;
   --color2: #aca9a9;
   --color3: #fff;
+  --color4: #797575;
 }
 
 body {
-  background-color: var(--color2);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 /* estilização do header */
 header {
-  width: 100%;
   background-color: var(--color1);
   color: var(--color3);
   display: flex;
@@ -28,6 +28,9 @@ header {
 }
 h2 {
   font-size: 1em;
+  & i {
+    margin-right: 10px;
+  }
 }
 #titulo {
   margin-left: 10px;
@@ -41,10 +44,10 @@ h2 {
   gap: 10px;
   font-weight: bold;
   padding: 10px;
+  flex: 1;
 }
 
 #boxInputs {
-  flex: 1;
   flex-wrap: wrap;
 }
 
@@ -60,6 +63,12 @@ h2 {
 }
 #box2 {
   flex: 1;
+}
+#box1 input,
+#box2 input {
+  width: 100%;
+  padding: 3px;
+  font-weight: bold;
 }
 
 label {
@@ -77,19 +86,13 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-#box1 input,
-#box2 input {
-  width: 100%;
-}
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-#box1 {
-}
-
 #iprocurar {
+  all: unset;
   background-color: var(--color1);
   border: 1px solid var(--color3);
   border-radius: 5px;
@@ -104,11 +107,65 @@ input[type='number'] {
     color: var(--color3);
   }
 }
-main {
-  margin: auto;
+
+#iprocurar:hover,
+#iprocurar:focus {
+  background-color: var(--color2);
+  border: 1px solid var(--color3);
+  & i {
+    color: var(--color1);
+  }
 }
 
-p {
+main {
+  background-color: var(--color2);
+  text-align: center;
+  flex-grow: 1;
+}
+
+h3 {
   margin: 20px auto 10px;
   font-weight: bold;
+}
+
+#movieList {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.containerMovie {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  & img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  & button {
+    all: unset;
+    width: 280px;
+    margin: auto;
+    background-color: var(--color1);
+    border: 1px solid var(--color1);
+    box-shadow: 1px 1px 10px black;
+    color: var(--color3);
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  & button:hover,
+  button:focus {
+    background-color: var(--color4);
+    cursor: pointer;
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+    font-weight: bold;
+  }
 }

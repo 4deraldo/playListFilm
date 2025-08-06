@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/modal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <link rel="shortcut icon" href="../playListFilm/favIcon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./src/notie-master/dist/notie.min.css">
 
   <!-- ajeitar o favicon dps -->
 
@@ -18,25 +20,36 @@
 <body>
   <header>
     <div id="titulo">
-      <i class="bi bi-film"></i>
-      <h2>MyMovies</h2>
+
+      <h2><i class="bi bi-film"></i>MyMovies</h2>
     </div>
-    <form action="" id="boxInputs">
+    <section id="boxInputs">
       <div id="box1">
         <label for="inome">Nome:</label>
-        <input type="text" name="nome" id="inome" class="">
+        <input type="text" name="nome" id="inome">
       </div>
       <div id="box2">
         <label for="iano">Ano:</label>
-        <input type="number" name="ano" id="iano" class="">
+        <input type="number" name="ano" id="iano">
       </div>
       <button id="iprocurar"><i class="bi bi-search"></i></button>
-    </form>
+    </section>
   </header>
   <main>
-    <p>Comece agora a sua lista de filmes</p>
+    <h3>Comece agora a sua lista de filmes</h3>
+    <section id="movieList">
+
+    </section>
+    <article id="modalOverlay" class="overlay">
+      <section id="modalBackground"></section>
+      <section id="modalContainer">
+      </section>
+    </article>
   </main>
   <script src="./scripts/script.js"></script>
+  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/key.js"></script>
+  <script src="./src/notie-master/dist/notie.min.js"></script>
 </body>
 
 </html>
