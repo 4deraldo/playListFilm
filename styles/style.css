@@ -49,6 +49,7 @@ h2 {
 
 #boxInputs {
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #box1,
@@ -114,6 +115,31 @@ input[type='number'] {
   border: 1px solid var(--color3);
   & i {
     color: var(--color1);
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+  #titulo,
+  #boxInputs {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+  #boxInputs {
+    width: 100%;
+    flex-direction: column;
+  }
+  #box1 {
+    width: 100%;
+  }
+  #box2 {
+    width: 100%;
+    & input {
+      width: 30%;
+    }
   }
 }
 
