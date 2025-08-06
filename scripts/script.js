@@ -10,7 +10,7 @@ let movieList = JSON.parse(localStorage.getItem('movieList')) ?? [];
 //função responsável pela chamada da api
 async function searchClickButtonHandler() {
   try {
-    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieParameterGenerator()}${movieYearParameterGenerator()}`;
+    let url = `https://www.omdbapi.com/?apikey=${key}&t=${movieParameterGenerator()}${movieYearParameterGenerator()}`;
     //precisa gerar uma chave no site da omdbapi
 
     const response = await fetch(url);
