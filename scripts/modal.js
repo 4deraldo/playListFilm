@@ -27,7 +27,7 @@ function createModal(data) {
   <h2 id="movieTilte">${data.Title} - ${data.Year}</h2>
         <section id="modalBody">
           <img id="moviePoster" src=${data.Poster}
-            alt="poster como treinar seu dragão">
+           alt="Poster de ${movie.Title}">
 
           <div id="movieInfo">
             <h3 id="moviePlot">${data.Plot}</h3>
